@@ -8,11 +8,11 @@ const {
 } = require('../../controllers/userController.js');
 
 // /api/users
-// router.route('/').get(getUsers).post(createUser);
+router.route('/').get(getUsers).post(createUser);
 
-// /api/users/:courseId
+// /api/users/:userId (changed parameter name to "userId")
 router
-  .route('/:UserId')
+  .route('/:userId')
   .get(getSingleUser)
   .put(updateUser)
   .delete(deleteUser);
